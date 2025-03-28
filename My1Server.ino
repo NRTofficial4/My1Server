@@ -25,8 +25,6 @@ void HandleRoot(){
   }
   server.streamFile(file,"text/html");
   file.close();
-
-  // server.send(200,"text/plain","You are stupid bitch ass nigger");
 }
 
 void TurnOnLed(){
