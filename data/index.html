@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <script>
+        let count = 0;
+        function TurnOnLed(){
+            fetch("http://192.168.10.1/turn_on_led")
+            .then(responnse => responnse.json);
+            console.log("i hate jews");
+
+        }
+
+        function TurnOffLed(){
+            fetch("http://192.168.10.1/turn_off_led")
+                .then(responnse => responnse.json);
+            console.log("i hate NIGGERS");
+
+        }
+            function myFunc(){
+                if(count == 0){
+                    document.getElementById("display").innerHTML = "TURN ON";
+                    TurnOffLed();
+                    count++;
+                }
+                else{
+                    document.getElementById("display").innerHTML = "TURN OFF";
+                    TurnOnLed();
+                    count = 0;
+                }  
+            }
+        </script>
+        <style>
+            .button{
+                border: none;
+                font-size: large;
+                color: white;
+                padding: 64px 64px;
+                background-color: blue;
+                cursor: pointer;
+                transition-duration: 200;
+            }
+
+            .button1:hover{background-color: rgb(121, 121, 165);};
+        </style>
+        <title>MyJavaSript</title>
+    </head>
+    <body>
+        <h1 id="nig">MY ESP 8266 SERVER</h1>
+        <button id ="display" type="button" class = "button button1" onclick="myFunc()">TURN ON</button>
+    </body>
+</html>
